@@ -1,0 +1,146 @@
+Data Types, Operators, Conditional Statements, Looping Statements, Functions.
+
+1. Data Types
+  
+  Q1.Differentiate between lists and tuples.
+
+        The major difference is that a list is mutable, but a tuple is immutable.
+        >>> mylist=[1,3,3]
+        >>> mylist[1]=2
+        >>> mytuple=(1,3,3)
+        >>> mytuple[1]=2
+
+  Q2. Explain the ternary operator in Python.
+
+        Unlike C++, we don’t have ?: in Python, but we have this:
+        >>> a,b=2,3
+        >>> min=a if a<b else b
+        >>> min
+
+        O/P: 2
+   
+  Q3. What are negative indices?
+    
+        >>> mylist=[0,1,2,3,4,5,6,7,8]
+        >>> mylist[-3]
+
+        O/P: 6
+    
+  Q4. Is Python case-sensitive?
+
+        A language is case-sensitive if it distinguishes between identifiers like myname and Myname. 
+        In other words, it cares about case- lowercase or uppercase. Let’s try this with Python.
+
+        >>> myname='Ayushi'
+        >>> Myname
+
+        O/P: ERROR
+   
+  Q5. How long can an identifier be in Python?
+
+      According to the official Python documentation, an identifier can be of any length. 
+      However, PEP 8 suggests that you should limit all lines to a maximum of 79 characters. 
+      Also, PEP 20 says ‘readability counts’. So, a very long identifier will violate PEP-8 and PEP-20.
+  
+  Q6. What is the pass statement in Python?
+
+      There may be times in our code when we haven’t decided what to do yet, but we must type something 
+      for it to be syntactically correct. In such a case, we use the pass statement.
+
+  Q7. Explain help() and dir() functions in Python.
+  
+      The help() function displays the documentation string and help for its argument.
+      The dir() function displays all the members of an object(any kind).
+  
+   Q8. How do you get a list of all the keys in a dictionary?
+   
+      For this, we use the function keys().
+      
+   Q9. What is slicing?
+
+      Slicing is a technique that allows us to retrieve only a part of a list, tuple, or string. 
+      For this, we use the slicing operator [].
+      
+      >>> (1,2,3,4,5)[2:4]
+      O/P: (3, 4)
+      
+   Q10. How will you check if all characters in a string are alphanumeric?
+   
+      For this, we use the method isalnum().
+  
+   Q11. How will you capitalize the first letter of a string?
+
+      Simply using the method capitalize().
+      
+   Q12. What are the limitations of Python?
+      
+      -> Python’s interpreted nature imposes a speed penalty on it.
+      -> While Python is great for a lot of things, it is weak in mobile computing, and in browsers.
+      -> Being dynamically-typed, Python uses duck-typing (If it looks like a duck, it must be a duck). This can raise runtime errors.
+      -> Python has underdeveloped database access layers. This renders it a less-than-perfect choice for huge database applications.
+      -> And then, well, of course. Being easy makes it addictive. Once a Python-coder, always a Python coder.
+      
+    Q13. With Python, how do you find out which directory you are currently in?
+    
+       To find this, we use the function/method getcwd(). We import it from the module os.
+       
+       >>> import os
+       >>> os.getcwd()   
+       Sample Output: ‘C:\\Users\\lifei\\AppData\\Local\\Programs\\Python\\Python36-32’
+       
+    Q14. How does a function return values?
+
+        A function uses the ‘return’ keyword to return a value. Take a look:
+        >>> def add(a,b):
+        return a+b
+        
+    Q15. Why do we need break and continue in Python?
+    
+        Both break and continue are statements that control flow in Python loops. 
+        break stops the current loop from executing further and transfers the control to the next block. 
+        continue jumps to the next iteration of the loop without exhausting it.
+     
+     Q16. How to convert a list into a string?
+        
+        We will use the join() method for this.
+        >>> nums=['one','two','three','four','five','six','seven']
+        >>> s=' '.join(nums)
+        >>> s
+        
+     Q17. How will you remove a duplicate element from a list?
+
+        We can turn it into a set to do that.
+
+     Q18.  Explain the //, %, and ** operators in Python.
+     
+        The // operator performs floor division. It will return the integer part of the result on division.
+        >>> 7//2
+        O/P: 3
+        
+        Similarly, ** performs exponentiation. a**b returns the value of a raised to the power b.
+        >>> 2**10
+        O/P: 1024
+        
+        Finally, % is for modulus. This gives us the value left after the highest achievable division.
+        >>> 13%7
+        O/P: 6
+        
+     Q19. What are membership operators?
+        
+        With the operators ‘in’ and ‘not in’, we can confirm if a value is a member in another.
+        
+        >>> 'me' in 'disappointment'
+        O/P: True
+        
+        >>> 'us' not in 'disappointment'
+        O/P: True
+        
+     Q20. Explain identity operators in Python.
+     
+       The operators ‘is’ and ‘is not’ tell us if two values have the same identity.
+
+       >>> 10 is '10'
+       O/P: False
+       
+       >>> True is not False       
+       O/P: True
